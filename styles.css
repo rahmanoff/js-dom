@@ -47,14 +47,10 @@ a {
     padding: 25px;
 }
 
-.main {}
-
 .menu {
     min-height: 50px;
     align-items: center;
 }
-
-.menu__item {}
 
 .menu__items {
     display: flex;
@@ -90,8 +86,6 @@ a {
     border: 1px solid red;
 }
 
-.section {}
-
 .article__title {
     padding: 10px;
     margin: 0 auto;
@@ -119,8 +113,4 @@ a {
 .footer {
     text-align: center;
     font-size: 12px;
-}
-
-.footer__link {
-    cursor: pointer;
 }
