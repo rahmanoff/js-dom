@@ -32,21 +32,17 @@ const menu1 = document.querySelector('#menu__item-1');
 const menu2 = document.querySelector('#menu__item-2');
 const menu3 = document.querySelector('#menu__item-3');
 
-menu1.addEventListener('click', () => {
-    title.innerHTML = alfas[0].model;
-    text.innerHTML = alfas[0].description;
-    price.innerHTML = alfas[0].price;
-    img.src = alfas[0].img;
-});
-menu2.addEventListener('click', () => {
-    title.innerHTML = alfas[1].model;
-    text.innerHTML = alfas[1].description;
-    price.innerHTML = alfas[1].price;
-    img.src = alfas[1].img;
-});
-menu3.addEventListener('click', () => {
-    title.innerHTML = alfas[2].model;
-    text.innerHTML = alfas[2].description;
-    price.innerHTML = alfas[2].price;
-    img.src = alfas[2].img;
-});
+const menus = [menu1, menu2, menu3]
+
+function main (item) {
+    for (let i = 0; i < item.length; i++) {
+        menus[i].addEventListener('click', () => {
+            title.innerHTML = alfas[i].model;
+            text.innerHTML = alfas[i].description;
+            price.innerHTML = alfas[i].price;
+            img.src = alfas[i].img;
+        })
+    }
+}
+
+main(alfas);
