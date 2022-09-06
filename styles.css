@@ -23,7 +23,7 @@ a {
     text-decoration: none;
 }
 
-@media(max-width: 600px) {
+@media(max-width: 1170px) {
     .menu__items {
         flex-direction: column;
     }
@@ -54,25 +54,34 @@ a {
     align-items: center;
 }
 
+.menu__item {}
+
 .menu__items {
     display: flex;
     justify-content: space-around;
-    padding: 15px;
+    padding: 5px;
     margin: 1px;
 }
 
-.menu__item {
-    font-size: 20px;
-    line-height: 24px;
+.menu__item-link {
+    text-align: center;
+    display: block;
+    margin: 5px;
     padding: 5px 10px;
-    cursor: pointer;
     border: 1px solid black;
     border-radius: 10px;
-    margin: 5px;
+    color: black;
+    font-size: 20px;
+    line-height: 24px;
 }
 
-.menu__item:hover,
-.menu__item:focus {
+.menu__item-link+.menu__item-link {
+    margin-bottom: 5px;
+}
+
+.menu__item-link:hover,
+.menu__item-link:focus-within,
+.menu__item-link:active {
     color: white;
     background-color: black;
 }
